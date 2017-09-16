@@ -1,0 +1,130 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="screen-container">
+    <view class="screen">
+      {{redTotalScore}} : {{blueTotalScore}}
+    </view>
+  </view>
+
+  <view class="auto-red">
+    <view class="title-text">红方自动</view>
+    <view class="count-button-group">
+      <view class="subtitle-text">中心漩涡</view>
+      <view class="btnAdd" bindtap="clickButton1"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButton2"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="count-button-group">
+      <view class="subtitle-text">角区漩涡</view>
+      <view class="btnAdd" bindtap="clickButton3"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButton4"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="count-button-group">
+      <view class="subtitle-text">信标</view>
+      <view class="btnAdd" bindtap="clickButton5"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce"  bindtap="clickButton6"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="slider-container">
+      <view class="slider-text">{{redSliderData1}}</view>
+      <slider max="1" step="1" bindchange="listenerSliderRed1" />
+      <view class="slider-text">{{redSliderData2}}</view>
+      <slider max="20" step="5" bindchange="listenerSliderRed2" />
+    </view>
+  </view>
+
+  <view class="auto-red-screen">
+    <view class="score-text-1">{{redData1}}</view>
+    <view class="score-text-2">{{redData2}}</view>
+    <view class="score-text-3">{{redData3}}</view>
+  </view>
+  
+
+  <view class="auto-blue">
+    <view class="title-text">蓝方自动</view>
+    <view class="count-button-group">
+      <view class="subtitle-text">中心漩涡</view>
+      <view class="btnAdd" bindtap="clickButtonB1"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButtonB2"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="count-button-group">
+      <view class="subtitle-text">角区漩涡</view>
+      <view class="btnAdd" bindtap="clickButtonB3"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButtonB4"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="count-button-group">
+      <view class="subtitle-text">信标</view>
+      <view class="btnAdd" bindtap="clickButtonB5"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce"  bindtap="clickButtonB6"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="slider-container">
+      <view class="slider-text">{{blueSliderData1}}</view>
+      <slider max="1" step="1" bindchange="listenerSliderBlue1" />
+      <view class="slider-text">{{blueSliderData2}}</view>
+      <slider max="20" step="5" bindchange="listenerSliderBlue2" />
+    </view>
+  </view>
+
+  <view class="auto-blue-screen">
+    <view class="score-text-1">{{blueData1}}</view>
+    <view class="score-text-2">{{blueData2}}</view>
+    <view class="score-text-3">{{blueData3}}</view>
+  </view>
+
+  <view class="driver-red">
+    <view class="title-text">红方手动</view>
+    <view class="count-button-group">
+      <view class="subtitle-text">中心漩涡</view>
+      <view class="btnAdd" bindtap="clickButton7"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButton8"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="count-button-group">
+      <view class="subtitle-text">角区漩涡</view>
+      <view class="btnAdd" bindtap="clickButton9"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButton10"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="count-button-group">
+      <view class="subtitle-text">信标</view>
+      <view class="btnAdd" bindtap="clickButton11"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButton12"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="slider-container">
+      <view class="slider-text">{{redSliderData3}}</view>
+      <slider max="3" step="1" bindchange="listenerSliderRed3" />
+    </view>
+  </view>
+  
+  <view class="driver-red-screen">
+    <view class="score-text-1">{{redData4}}</view>
+    <view class="score-text-2">{{redData5}}</view>
+    <view class="score-text-3">{{redData6}}</view>
+  </view>
+
+
+    <view class="driver-blue">
+    <view class="title-text">蓝方手动</view>
+    <view class="count-button-group">
+      <view class="subtitle-text">中心漩涡</view>
+      <view class="btnAdd" bindtap="clickButtonB7"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButtonB8"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="count-button-group">
+      <view class="subtitle-text">角区漩涡</view>
+      <view class="btnAdd" bindtap="clickButtonB9"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButtonB10"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="count-button-group">
+      <view class="subtitle-text">信标</view>
+      <view class="btnAdd" bindtap="clickButtonB11"><view class="btnAdd-container">+</view></view>
+      <view class="btnReduce" bindtap="clickButtonB12"><view class="btnReduce-container">-</view></view>
+    </view>
+    <view class="slider-container">
+      <view class="slider-text">{{blueSliderData3}}</view>
+      <slider max="3" step="1" bindchange="listenerSliderblue3" />
+    </view>
+  </view>
+  
+  <view class="driver-blue-screen">
+    <view class="score-text-1">{{blueData4}}</view>
+    <view class="score-text-2">{{blueData5}}</view>
+    <view class="score-text-3">{{blueData6}}</view>
+  </view>
+</view>
